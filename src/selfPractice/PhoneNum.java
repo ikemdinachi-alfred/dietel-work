@@ -1,4 +1,4 @@
-package ClassWithSamShola;
+package selfPractice;
 
 
 import java.util.Scanner;
