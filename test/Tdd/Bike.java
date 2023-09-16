@@ -15,31 +15,31 @@ public class Bike {
     }
 
     public void increaseAcceleration() {
-        if (speed >= 0 && speed <=20) {
-            speed += 1;
-        } else if ( speed > 20 && speed <= 30) {
-            speed += 2;
+        if ( speed >= 0 && speed <=20) {
+            gear= speed += 1;
+        } else if ( speed >20 && speed <= 30) {
+            gear=speed += 2;
         } else if ( speed > 30 && speed <= 40) {
-            speed += 3;
+            gear=speed += 3;
         } else if ( speed > 40) {
-            speed += 4;
+            gear=speed += 4;
         }
     }
 
     public void decreaseAcceleration() {
         if (speed>=0 && speed<=20){
-        speed-=1;
+        gear=speed-=1;
         } else if ( speed>20 && speed<=30) {
-            speed -= 2;
+           gear= speed -= 2;
         } else if ( speed>30 && speed<=40) {
-            speed -= 3;
+            gear=speed -= 3;
         } else if ( speed>40){
-            speed-=4;
+            gear=speed-=4;
         }
     }
 
-    public int getSpeed() {
-        return speed;
+    public int getGear() {
+        return gear;
     }
 
 

@@ -1,6 +1,10 @@
 package ClassWithSamShola;
 
+
+import java.util.Scanner;
+
 public class PhoneNum {
+    Scanner input = new Scanner(System.in);
     public String returnNumber(String number){
         if (mtnNumber(number)) return "Mtn";
         if (gLoNumber(number)) return "glo";
@@ -32,7 +36,7 @@ public class PhoneNum {
             return false;
         }
     private boolean airTelNumber (String phoneNumber ) {
-        String[] checkGlo = {"0802", "0808", "0708", "0812","0701","0902"," 0901", "0904", "0907", "0912"};
+        String[] checkGlo = {"0802"," 0901", "0808", "0708", "0812","0701","0902", "0904", "0907", "0912"};
         for (int airTel = 0; airTel < checkGlo.length; airTel++) {
             if (checkGlo[airTel].equals(firstFour(phoneNumber))) {
                 return true;
@@ -53,11 +57,16 @@ public class PhoneNum {
     }
 
     public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
 
 
 
         PhoneNum myPhone = new PhoneNum();
-        System.out.println(myPhone.returnNumber("09099332737"));
+
+        System.out.println(" Enter phone number to know your network: ");
+        String number= input.nextLine();
+        System.out.println(myPhone.returnNumber(number));
+
 
 
     }
