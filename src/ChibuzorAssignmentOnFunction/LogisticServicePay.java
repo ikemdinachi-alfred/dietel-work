@@ -2,7 +2,7 @@ package ChibuzorAssignmentOnFunction;
 
 public class LogisticServicePay {
     public static void main(String[] args) {
-        paymentAmount(90);
+        paymentAmount(80);
     }
 
         public static void paymentAmount (int collection){
