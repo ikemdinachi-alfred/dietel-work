@@ -35,10 +35,12 @@ public class Mp3Test {
     @Test
     public void Mp3VolumeCanNotBeMoreThan10(){
         Mp3 myMp3 =new Mp3();
-        for (int count=1; count<=11;count+=1){
+        for (int count=1; count<=15;count+=1){
             myMp3.increaseVolume();
+
         }
         assertEquals(10,myMp3.getVolume());
+        System.out.println(myMp3.getVolume());
 
     }
     @Test

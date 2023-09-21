@@ -1,6 +1,6 @@
 package Tdd;
 
-public class Arithmetics {
+public class    Arithmetics {
 
     public boolean isEven(int number) {
         boolean result = false;
@@ -14,7 +14,7 @@ public class Arithmetics {
         return result;
     }
     public boolean isPrimeNumber (int number){
-        if (number <= 1)
+        if (number <= 2)
             return false;
         for (int count = 2; count < number; count++)
             if (number % count == 0)
