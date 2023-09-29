@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int secondNumber =0;
 
-        while (true) {
+        while (secondNumber != 2) {
             System.out.println("CALCULATOR ");
 
             System.out.println("""
@@ -19,7 +20,7 @@ public class Calculator {
                     6-> More Options
                                
                                         """);
-            System.out.println("select options: ");
+            System.out.print("select options: ");
             int number1;
             int number2;
 
@@ -33,15 +34,13 @@ public class Calculator {
                     number2 = input.nextInt();
                     int result = number1 + number2;
                     System.out.println("Result is: " + result);
-                    System.out.println("Do you want to continue press 1");
-                    int secondNumber = input.nextInt();
+                    System.out.println("Do you want to continue press 1, else press 2 ");
+                     secondNumber = input.nextInt();
+
                     switch (secondNumber) {
 
                         case 1:
                             System.out.println("Welcome back !");
-                            break;
-                        default:
-                            System.out.println("Wrong input");
                             break;
 
                     }
@@ -52,16 +51,18 @@ public class Calculator {
                     number1 = input.nextInt();
                     System.out.print("Enter Second number: ");
                     number2 = input.nextInt();
-                    int result1 = number1 - number2;
-                    System.out.println("Result is: " + result1);
-                    System.out.println("Do you want to continue press 1");
-                    int welcome=input.nextInt();
-                    switch (welcome) {
+                    if (number2 < 0 || number1 < 0) {
+                        int result1 = number1 + number2;
+                        System.out.println("Result is: " + result1);
+                    }else {
+                        int result = number1 - number2;
+                        System.out.println("Result is: " + result);
+                    }
+                    System.out.println("Do you want to continue press 1, else press 2 ");
+                    secondNumber =input.nextInt();
+                    switch (secondNumber) {
                         case 1:
                             System.out.println("Welcome back !!");
-                            break;
-                        default:
-                            System.out.println("Wrong input");
                             break;
                     }
 
@@ -76,14 +77,11 @@ public class Calculator {
                     number2 = input.nextInt();
                     double result2 = (double) number1 / number2;
                     System.out.printf("result is: %.1f %n", result2);
-                    System.out.println("Do you want to continue press 1");
-                    int welcome1=input.nextInt();
-                    switch (welcome1) {
+                    System.out.println("Do you want to continue press 1 if not press 2 to stop ");
+                    secondNumber=input.nextInt();
+                    switch (secondNumber) {
                         case 1:
                             System.out.println("Welcome back !!");
-                            break;
-                        default:
-                            System.out.println("Wrong input");
                             break;
                     }
 
@@ -97,14 +95,11 @@ public class Calculator {
                     number2 = input.nextInt();
                     int result4 = number1 * number2;
                     System.out.println("Result is: " + result4);
-                    System.out.println("Do you want to continue press 1");
-                    int welcome=input.nextInt();
-                    switch (welcome) {
+                    System.out.println("Do you want to continue press 1 or press 2 to stop ");
+                    secondNumber =input.nextInt();
+                    switch (secondNumber) {
                         case 1:
                             System.out.println("Welcome back !!");
-                            break;
-                        default:
-                            System.out.println("Wrong input");
                             break;
                     }
 
@@ -116,14 +111,11 @@ public class Calculator {
                     number1 = input.nextInt();
                     int result5 = number1 * number1;
                     System.out.println("Result is: " + result5);
-                    System.out.println("Do you want to continue press 1");
-                    int welcome=input.nextInt();
-                    switch (welcome) {
+                    System.out.println("Do you want to continue press 1 or else press 2 to stop");
+                    secondNumber =input.nextInt();
+                    switch (secondNumber) {
                         case 1:
                             System.out.println("Welcome back !!");
-                            break;
-                        default:
-                            System.out.println("Wrong input");
                             break;
                     }
 
@@ -132,19 +124,15 @@ public class Calculator {
                 case 6 -> {
                     System.out.println("more Options:");
                     System.out.println("more option status is being updated, try again.");
-                    System.out.println("Do you want to continue press 1");
-                    int welcome=input.nextInt();
-                    switch (welcome) {
+                    System.out.println("Do you want to continue press 1 or enter 2  to stop");
+                    secondNumber =input.nextInt();
+                    switch (secondNumber) {
                         case 1:
                             System.out.println("Welcome back !!");
-                            break;
-                        default:
-                            System.out.println("Wrong input");
                             break;
                     }
 
                 }
-
 
                 default ->
                     System.out.println("Wrong option chosen!!");

@@ -59,8 +59,6 @@ public class PhoneNum {
     public static void main(String[] args) {
         Scanner input= new Scanner(System.in);
 
-
-
         PhoneNum myPhone = new PhoneNum();
 
         System.out.println(" Enter phone number to know your network: ");
@@ -68,14 +66,7 @@ public class PhoneNum {
         System.out.println(myPhone.returnNumber(number));
 
 
-
     }
 
 
-
-
-
-
-
     }
-

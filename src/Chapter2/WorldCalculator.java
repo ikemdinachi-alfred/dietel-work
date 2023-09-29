@@ -30,7 +30,6 @@ public class WorldCalculator {
             System.out.printf("The World population by 2028 will be Approximately: %d%n%n", population5);
 
 
-
         }
 
     }
