@@ -1,4 +1,4 @@
-package ChibuzorAssignmentOnFunction;
+package Chapter4;
 
 public class LogisticServicePay {
     public static void main(String[] args) {
