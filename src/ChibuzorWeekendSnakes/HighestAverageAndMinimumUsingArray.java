@@ -1,4 +1,4 @@
-package ChibuzorArraySnakes;
+package ChibuzorWeekendSnakes;
 
 import java.util.Scanner;
 

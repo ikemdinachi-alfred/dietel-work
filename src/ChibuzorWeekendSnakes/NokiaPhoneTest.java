@@ -1,4 +1,4 @@
-package ChibuzorArraySnakes;
+package ChibuzorWeekendSnakes;
 
 import Chapter4.NokiaPhone;
 

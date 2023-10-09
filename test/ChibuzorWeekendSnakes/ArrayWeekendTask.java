@@ -1,8 +1,6 @@
- package ChibuzorArraySnakes;
+ package ChibuzorWeekendSnakes;
 
-import java.util.Arrays;
-
-public class ArrayWeekendTask {
+ public class ArrayWeekendTask {
 
     public static int[] reverseArrayList(int[] array) {
         int reverser = 0;
