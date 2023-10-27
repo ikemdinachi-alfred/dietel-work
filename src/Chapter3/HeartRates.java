@@ -1,33 +1,34 @@
 package Chapter3;
 
 public class HeartRates {
-    private String firstName, lastName;
-    private int date,month,year;
+    private String fullName;
+    private int day, month, year;
 
-    public void setDate(int date){
-        this.date=date;
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public void setLastName(String lastName){
-        this.lastName=lastName;
-    }
-
-    public void setYear(int year) {
+    public void setBirthDay(int day, int month, int year) {
+        this.month = month;
+        this.day = day;
         this.year = year;
     }
-
-    public void setMonth(int month) {
-        this.month = month;
+    public String getBirthday() {
+        return day + ":" + month + ":" + year;
     }
-
     public int getAge() {
-        return date+month+year;
+        return 2023 - year;
     }
-    public String fullName(){
-        return firstName+lastName;
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public int getMaximumHeartRate() {
+        return 220 - getAge();
+    }
+
+    public int getTargetHeartRate() {
+        return (int) (0.7 * getMaximumHeartRate());
     }
 }

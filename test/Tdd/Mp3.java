@@ -7,26 +7,22 @@ public class Mp3 {
     private boolean isOn;
 
 
-    public void switchOn() {
-        this.isOn = true;
+    public void switchOn() {isOn = true;
     }
 
-    public void switchOff() {
-        this.isOn = false;
+    public void switchOff() {isOn = false;
     }
 
     public void increaseVolume() {
-        if (volume >= 0 && volume < 10)
-            this.volume = volume += 1;
+        if (volume >= 0 && volume < 10) volume += 1;
     }
-    public void decreaseVolume(){
-        if (volume >0 && volume<10)
-            this.volume=volume-=1;
+
+    public void decreaseVolume() {
+        if (volume > 0 && volume < 10) volume-= 1;
     }
 
     public int getVolume() {
-
-            return volume;
+        return volume;
     }
 
 }

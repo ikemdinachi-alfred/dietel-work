@@ -5,11 +5,11 @@ public class Account {
     private int balance;
     public void deposit(int amount){
         if (amount>balance)
-        this.balance=balance+amount;
+        this.balance+=amount;
     }
     public void withdraw(int amount){
         if(balance>0 && balance>amount )
-        this.balance=balance-amount;
+        this.balance-=amount;
     }
 
     public int getBalance() {

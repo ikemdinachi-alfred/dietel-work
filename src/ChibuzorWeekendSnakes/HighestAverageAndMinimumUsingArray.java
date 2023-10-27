@@ -21,7 +21,7 @@ public class HighestAverageAndMinimumUsingArray {
              minimum =  scores[count];
              total =total + scores[count];
              average = (double) total/scores.length;
-             if (scores[count] < minimum)  minimum = scores[count];
+             if (scores[count] > minimum )  minimum = scores[count];
              if (scores[count] > maximum)  maximum = scores[count] ;
 
         }

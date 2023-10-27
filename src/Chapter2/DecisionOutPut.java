@@ -39,7 +39,7 @@ public class DecisionOutPut {
                 System.out.printf("The Highest integer is: %d%n%n%n", integer5);
 
             if (integer1< integer2 && integer1< integer3 && integer1< integer4 && integer1< integer5)
-                System.out.printf("The Loweest integer is: %d%n%n", integer1);
+                System.out.printf("The Lowest integer is: %d%n%n", integer1);
 
             if (integer2 < integer1 && integer2< integer3 && integer2< integer4 && integer2< integer5)
                 System.out.printf("The Lowest integer is: %d%n%n", integer2);

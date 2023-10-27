@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Mp3Test {
+public class  Mp3Test {
     @Test
     public void turnOnMp3(){
         //Given that i have a brand new Mp3
