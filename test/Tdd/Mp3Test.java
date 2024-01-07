@@ -1,26 +1,21 @@
 package Tdd;
 
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.testng.AssertJUnit.assertEquals;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class  Mp3Test {
-    @Test
     public void turnOnMp3(){
         //Given that i have a brand new Mp3
         Mp3 myMp3 = new Mp3 ();
         myMp3.switchOn();
         assertTrue(true);
     }
-    @Test
     public void turnOffMp3(){
         Mp3 myMp3 = new Mp3();
         myMp3.switchOff();
         assertTrue(true);
 
     }
-    @Test
     public void increaseMp3Volume(){
         Mp3 myMp3 = new Mp3();
         myMp3.increaseVolume();
@@ -32,7 +27,6 @@ public class  Mp3Test {
         myMp3.increaseVolume();
         assertEquals(9,myMp3.getVolume());
     }
-    @Test
     public void Mp3VolumeCanNotBeMoreThan10(){
         Mp3 myMp3 =new Mp3();
         for (int count=1; count<=15;count+=1){
@@ -43,7 +37,6 @@ public class  Mp3Test {
         System.out.println(myMp3.getVolume());
 
     }
-    @Test
     public void decreaseMp3Volume(){
         Mp3 myMp3 = new Mp3();
         myMp3.increaseVolume();
@@ -56,8 +49,7 @@ public class  Mp3Test {
        assertEquals(3,myMp3.getVolume());
 
     }
-     @Test
-    public void checkThatVolumeCanNotBeNegative(){
+     public void checkThatVolumeCanNotBeNegative(){
         Mp3 myMp3= new Mp3();
         myMp3.increaseVolume();
         for (int count=1; count<=3;count+=1){

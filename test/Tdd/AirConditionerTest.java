@@ -39,8 +39,8 @@ public class AirConditionerTest {
         myAirConditioner.increaseTemperature();
         assertEquals(20,myAirConditioner.getTemperature());
     }
-
     @Test
+
     public void testAirConditionerCanNotIncreaseAbove30() {
         AirConditioner lgAirConditioner = new AirConditioner();
         lgAirConditioner.turnOn();
@@ -68,8 +68,8 @@ public class AirConditionerTest {
         assertEquals(17,myAirConditioner.getTemperature());
 
     }
-
     @Test
+
     public void testThatAirConditionerCanNotDecreaseBelow16(){
         AirConditioner myAirConditioner = new AirConditioner();
         myAirConditioner.turnOn();

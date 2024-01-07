@@ -1,8 +1,7 @@
 package Exercises;
 
 import junit.framework.TestCase;
-
-import java.util.ArrayList;
+import org.junit.jupiter.api.Assertions;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
@@ -22,7 +21,7 @@ public class ClassTaskWithFemiTest extends TestCase {
         String expected = "We outside";
         String result = "edistuo eW";
         String actual = ClassTaskWithFemi.stringReverse(expected);
-       assertEquals(result,actual);
+       Assertions.assertEquals(result,actual);
 
     }
     public void testForNumbersThatAreDuplicate(){

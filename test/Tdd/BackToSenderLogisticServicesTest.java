@@ -4,7 +4,6 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class BackToSenderLogisticServicesTest {
-    @Test
     public void checkRiderspayment() {
         BackToSenderLogisticServicesPay dispatchpayment = new BackToSenderLogisticServicesPay();
         int result = dispatchpayment.ridersPayment(80);

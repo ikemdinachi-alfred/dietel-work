@@ -1,6 +1,6 @@
 package Tdd;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -13,16 +13,16 @@ public class BikeTest {
         assertTrue(true);
 
     }
-
     @Test
+
     public void turnOffBike() {
         Bike kimco = new Bike();
         kimco.switchOn();
         kimco.switchOff();
         assertTrue(true);
     }
-
     @Test
+
     public void increaseBikeSpeedWhenInGearOne() {
         Bike qlink = new Bike();
         for (int count = 1; count <= 17; count += 1) {
@@ -30,8 +30,8 @@ public class BikeTest {
         }
         assertEquals(17, qlink.getGear());
     }
-
     @Test
+
     public void decreaseBikeSpeedWhenInGearOne() {
         Bike myBike = new Bike();
         for (int count = 1; count < 15; count += 1) {
@@ -43,8 +43,8 @@ public class BikeTest {
         assertEquals(10, myBike.getGear());
 
     }
-
     @Test
+
     public void increaseBikeSpeedWhenInGearTwo() {
         Bike myBike = new Bike();
         for (int count = 1; count <= 21; count++) {
@@ -55,8 +55,8 @@ public class BikeTest {
         assertEquals(25, myBike.getGear());
 
     }
-
     @Test
+
     public void increaseBikeSpeedWhenInGearThree() {
         Bike myBike = new Bike();
         for (int count = 1; count <= 20; count++) {
@@ -70,7 +70,6 @@ public class BikeTest {
         }
         assertEquals(40, myBike.getGear());
     }
-
     @Test
 
     public void increaseBikeSpeedWhenInGearFour() {
@@ -88,8 +87,8 @@ public class BikeTest {
         myBike.increaseAcceleration();
         assertEquals(47, myBike.getGear());
     }
-
     @Test
+
     public void decreaseBikeSpeedFromGearFourBackToOne() {
         Bike myBike = new Bike();
         for (int count = 1; count <= 20; count++) {
