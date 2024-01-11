@@ -1,4 +1,6 @@
-   import java.util.Scanner;
+package selfPractice;
+
+import java.util.Scanner;
 
 public class Switch {
     public static void main(String[] args) {

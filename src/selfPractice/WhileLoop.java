@@ -1,3 +1,5 @@
+package selfPractice;
+
 import java.util.Scanner;
 
 public class WhileLoop {

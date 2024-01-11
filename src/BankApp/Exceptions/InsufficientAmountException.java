@@ -1,4 +1,4 @@
-package BankApplication.Exceptions;
+package BankApp.Exceptions;
 
 
 public class InsufficientAmountException extends RuntimeException {

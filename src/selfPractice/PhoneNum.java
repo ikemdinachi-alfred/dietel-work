@@ -4,7 +4,6 @@ package selfPractice;
 import java.util.Scanner;
 
 public class PhoneNum {
-    Scanner input = new Scanner(System.in);
     public String returnNumber(String number){
         if (mtnNumber(number)) return "Mtn";
         if (gLoNumber(number)) return "glo";
