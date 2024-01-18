@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ShipmentTest {
     @Test
     public void testShipmentId_isCorrect(){
-        Shipment shipment = new Shipment(0011,"Abuja");
+        Shipment shipment = new Shipment(00115,"Abuja");
         int ids = shipment.getShipmentId();
-        assertEquals(0011,ids);
+        assertEquals(00115,ids);
     }
     @Test
     public void testShipmentLocation_isCorrect(){
-        Shipment shipment = new Shipment(0011,"Abuja");
+        Shipment shipment = new Shipment(0021,"Abuja");
         String ids = shipment.getShipmentDestination();
         assertEquals("Abuja",ids);
     }
