@@ -8,13 +8,14 @@ public class CodesCracker
     {
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("Enter the Number of Seconds: ");
-        int sec = scan.nextInt();
+        System.out.print("Enter the Number of seconds to short down this system: ");
+        int seconds = scan.nextInt();
         Runtime r = Runtime.getRuntime();
+
         try
         {
-            System.out.println("The PC will get restarted after " +sec+" seconds.");
-            r.exec("shutdown -r -t " +sec);
+            System.out.println("The PC will get restarted after " +seconds +" seconds.");
+            r.exec("shutdown -r -t " + seconds);
         }
         catch(IOException e)
         {
