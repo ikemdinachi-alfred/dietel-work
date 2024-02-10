@@ -1,25 +1,27 @@
 package LibrarayManagementApplication;
 
 public class Users {
-String name;
+String userName;
 String phoneNumber;
 String id;
 String address;
+String password;
 
-    public Users(String name, String id) {
-        this.name = name;
-        this.id = id;
+    public Users(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
     }
 
-    public Users(String name, String phoneNumber, String id, String address) {
-        this.name = name;
+    public Users(String userName, String phoneNumber, String id, String address, String password) {
+        this.userName = userName;
         this.phoneNumber = phoneNumber;
         this.id = id;
         this.address = address;
+        this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
     public String getPhoneNumber() {
@@ -30,16 +32,21 @@ String address;
         return id;
     }
 
+    public String getPassword(){
+        return password;
+    }
+
     public String getAddress() {
         return address;
     }
     public String toString(){
         return String.format("""
-                Name : %s
+                User Name : %s
                 Phone Number: %s
                 Library ID No : %s
+                Password : %s
                 Address: %s
                 
-                """, name,phoneNumber,id,address);
+                """, userName,phoneNumber,id,password,address);
     }
 }

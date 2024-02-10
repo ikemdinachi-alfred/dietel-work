@@ -1,10 +1,12 @@
 package LibrarayManagementApplication;
 
+import LibrarayManagementApplication.exceptions.InvalidBookSearchException;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LibraryManagementApp {
-    static Library library;
+    public static Library library = new Library();
     static int  totalNumberOfRegisteredUsers;
 
     public static  int getTotalNumberOfRegisteredUsers() {
@@ -33,11 +35,11 @@ public class LibraryManagementApp {
     }
 
     private static void login() {
-        String name = input("Enter your name: ");
-        String id = input("Enter your ID Number: ");
+        String name = input("Enter your username: ");
+        String password = input("Enter your password: ");
         try {
-            library.login(name,id);
-            System.out.println("you login succcessfully...");
+            library.login(name,password);
+            System.out.println("login successful ...");
             libraryMainMenu();
         }
         catch (InvalidBookSearchException message){
@@ -54,9 +56,10 @@ public class LibraryManagementApp {
         String lastName = input("Enter last Name: ");
         String phoneNumber = input("Enter your phone Number: ");
         String address = input("Enter Email Address: ");
+        String password= input("Enter password: ");
         String id = iDGenerator();
-        String fullName = concatinateName(firstName,lastName);
-        Users users1 = new Users(fullName,phoneNumber,id,address);
+        String username = usernameGenerator(firstName,lastName);
+        Users users1 = new Users(username,phoneNumber,id,address,password);
         users.add(users1);
         System.out.println("Registration successful....\n check your details \n");
         System.out.println(users);
@@ -66,11 +69,11 @@ public class LibraryManagementApp {
 
 
     private static String iDGenerator() {
-        return "000" + getTotalNumberOfRegisteredUsers();
+        return "000"+ getTotalNumberOfRegisteredUsers();
     }
 
-    private static String concatinateName(String firstName, String lastName) {
-        return firstName + " " + lastName;
+    private static String usernameGenerator(String firstName, String lastName) {
+        return firstName+"@"+ lastName;
     }
 
     public static String input(String string){

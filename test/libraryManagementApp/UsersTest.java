@@ -1,5 +1,6 @@
-package LibrarayManagementApplication;
+package libraryManagementApp;
 
+import LibrarayManagementApplication.Users;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,17 +11,17 @@ public class UsersTest {
 
     @BeforeEach
     public void usersName() {
-        users = new Users("name", "phonenumber", "id", "address");
+        users = new Users("name", "phoneNumber", "id", "address","password");
     }
 
     @Test
-    public void testUsersname() {
-        assertEquals("name", users.getName());
+    public void testUsersName() {
+        assertEquals("name", users.getUserName());
     }
 
     @Test
     public void testUsersPhoneNumber() {
-        assertEquals("phonenumber", users.getPhoneNumber());
+        assertEquals("phoneNumber", users.getPhoneNumber());
     }
 
     @Test
